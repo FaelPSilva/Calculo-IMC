@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        CALCULADORA IMC
+        <h2>CALCULADORA IMC</h2>
     </header>
     <main class="container">
        
@@ -35,7 +35,7 @@
                         </label>
                         <div class="input-field">
                             <i class="fa-solid fa-weight-hanging"></i>
-                            <input type="text" id="weight" required>
+                            <input type="int" maxlength="3" id="weight" required>
                             <span>kg</span>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                         </label>
                         <div class="input-field">
                             <i class="fa-solid fa-ruler"></i>
-                            <input type="text" id="height" required>
+                            <input type="text" maxlength="4" id="height" required>
                             <span>m</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                     
                 </form>       
             </section>
-            <div class="result-container">
+            <div class="result-container" class="show">
                 <p id="imcNumber">Seu IMC é: <span id="resultIMC"></span></p>
                 <p id="imcSituation"> Situação:<span id="imcSituationText"></span></p>
                 <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm" target="_blank">
@@ -71,16 +71,22 @@
                 </a>
                 <a href="pag2.html" id="back"><i class="fa-solid fa-circle-arrow-left" class="buttonBack"></i></a>
             </div>
+
+            <div id="bottomHome">
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+               
+                
+            </div>
+
+            
     </main>
     
+<footer>
+    site criado por <br>
+    Rafael Silva   <a href="https://github.com/" target="_blank" class="socialMedia"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" class="socialMedia"><i class="fa-brands fa-linkedin"></i></a><br>
+    Para Estudo de HTML, CSS e JavaScripit
+</footer>
 
-    <script> 
-        function calculate(){
-            
-           
-            
-          }
-    </script>
 
 <script src="JS/script.js"></script>
 </body>

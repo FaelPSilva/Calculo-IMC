@@ -9,8 +9,17 @@ body{
     background-attachment: fixed;
 }/*configurações do body*/
 
+
+h2{
+    animation: upText;
+    animation-duration: 5s;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
 header{
-    margin: 0px;
+    
     font-family: "Poppins", sans-serif;
     text-align: center;
     height: 100px;
@@ -25,11 +34,12 @@ header{
 } /*configurações do header*/
 
 img {
+    padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 223px;
+    height: 220px;
 } /*imagem de fundo*/
 
 main {
@@ -41,8 +51,15 @@ main {
     box-shadow: 5px 5px 10px rgba(104, 103, 103, 0.781);
     border-radius: 5px;
     margin: auto;
-    margin-top: 13vh;
+   
 } /*conteúdo principal*/
+
+h1#tittle{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+}
 
 form{
     display: flex;
@@ -54,6 +71,7 @@ form{
     justify-content: center;
     align-items: center;
 }
+
 
 #calculator{
         padding: 10px;
@@ -78,7 +96,7 @@ button:hover{
         background-color: rgb(22, 110, 19);
 }
 #limpar{
-        padding: 10px;
+        padding: 10px 15px 10px 15px;
         margin-top: 10px;
         border-radius: 5px;
         cursor: pointer;
@@ -89,7 +107,21 @@ button:hover{
         background-color: rgb(192, 154, 49);
 }
 
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+to
+    {
+        opacity: 1;
+    }
+}
+
+
    
+
 
 .result-container{
     display: none;
@@ -97,6 +129,15 @@ button:hover{
     justify-content: center;
     align-items: center;
    
+}
+
+.result-container.show{
+    animation: fadeIn;
+    animation-duration: 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 p#imcNumber{
@@ -139,7 +180,52 @@ p#imcSituation{
 }
 
 a#back{
-    margin-top: 30px;
-    
+    margin-top: 0px;
+    font-size: 50px;
 }
 
+footer {
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #b4b1b1;
+    padding: 20px;
+    text-align: center;
+    color: #2e2b2b;
+}
+
+#bottomHome{
+    margin-left: 30px;
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: 50%;
+    text-shadow: 1px 2px 5px rgb(48, 47, 47);
+}
+
+.socialMedia{
+    font-size: 20px;
+    padding: 5px;
+    color: #313030;
+}
+
+@media screen and (max-width: 500px) {
+    li {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte para 14px quando a largura da tela é 500px ou menos */
+        padding-top: 0px;
+    }
+
+    #start {
+        margin-top: 20px;
+    }
+    footer {
+        display: none;
+        width: 100%;
+        background-color: #b4b1b1;
+        padding: 20px;
+        text-align: center;
+        color: #2e2b2b;
+        position: fixed;
+        bottom: 0;
+    }
+}

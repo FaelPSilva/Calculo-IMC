@@ -102,15 +102,25 @@ div#start a {
     #start {
         margin-top: 20px;
     }
+    footer {
+        display: none;
+        width: 100%;
+        background-color: #b4b1b1;
+        padding: 20px;
+        text-align: center;
+        color: #2e2b2b;
+        position: fixed;
+        bottom: 0;
+    }
+   
 }
 
 
 
 
-/*
+
 footer {
-    position: fixed;
-    position: absolute;
+    position:absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -118,6 +128,12 @@ footer {
     padding: 20px;
     text-align: center;
     color: #2e2b2b;
+}
+
+.socialMedia{
+    font-size: 20px;
+    padding: 5px;
+    color: #313030;
 }
 
 
