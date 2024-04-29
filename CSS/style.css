@@ -102,8 +102,11 @@ div#start a {
     #start {
         margin-top: 20px;
     }
+
+
+
     footer {
-        display: none;
+        display: block;
         width: 100%;
         background-color: #b4b1b1;
         padding: 20px;
@@ -111,15 +114,20 @@ div#start a {
         color: #2e2b2b;
         position: fixed;
         bottom: 0;
+        padding-top: 20px;
+        
     }
    
 }
 
-
+main{
+    margin-top: -20px;
+}
 
 
 
 footer {
+    display: none;
     position:absolute;
     left: 0;
     bottom: 0;

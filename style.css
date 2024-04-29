@@ -214,18 +214,22 @@ footer {
         font-size: 0.9rem; /* Reduz o tamanho da fonte para 14px quando a largura da tela é 500px ou menos */
         padding-top: 0px;
     }
-
+.container{
+    margin-top: -20px;
+}
     #start {
         margin-top: 20px;
     }
     footer {
-        display: none;
+        display: block;
         width: 100%;
         background-color: #b4b1b1;
         padding: 20px;
         text-align: center;
         color: #2e2b2b;
-        position: fixed;
+        
         bottom: 0;
+        padding-top: 20px;
+        
     }
 }

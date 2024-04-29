@@ -1,11 +1,16 @@
 var showButton = document.getElementById("calculator") 
 var formBTN = document.querySelector("imcForm")
+
+
 function calculate(){
 
     event.preventDefault();
+
+    
          
     var weight = document.getElementById("weight").value; //varivel peso
-    var height = document.getElementById("height").value; // variavel altura
+    var height = document.getElementById("height").value.replace(',','.'); // variavel altura adicionado um .replace para trocar a ',' por '.';
+    
     
     
     if (weight.trim() == '' || height.trim() == '') {
@@ -26,7 +31,6 @@ function calculate(){
        
         document.querySelector(".result-container")
         .classList.toggle('show');
-        //style.display = "flex" ;
 
         document.querySelector(".input").style.display = "none"
 
@@ -63,19 +67,49 @@ function calculate(){
     document.getElementById('height').value = '';   
     }
     );
+
+    document.querySelector('.enterInputWeight').addEventListener('keypress', function(event) {
+       
+        var keyCode = event.keyCode;
+       var key = String.fromCharCode(keyCode);
+        var regex = /^[0-9]+$/; // Expressão regular para permitir apenas dígitos numéricos
    
-    // showButton.addEventListener("keyup", function(event) {
-       
-    // }); 
-
-    // formBTN.addEventListener("click", function(event) {
-    //     //exibe a div com class container-result
- 
-    //    event.preventDefault()
+        if (!regex.test(key)) {
+            event.preventDefault(); // Impede a entrada da tecla se não corresponder à expressão regular
+        }
 
        
- 
-    //  });
+    });
+
+    document.querySelector('.enterInputWeight').addEventListener('paste', (event) => {
+        event.preventDefault(); // Impede a ação padrão de colar texto no campo de entrada
+    });
+
+    document.querySelector('.enterInputHeight').addEventListener('input', (event) => {
+        var input = event.target.value; // Obtém o valor atual do campo de entrada
+        var regex = /^[0-9.,]*$/; // Expressão regular para permitir apenas dígitos numéricos, vírgulas e pontos
+    
+        if (!regex.test(input)) {
+            event.target.value = input.replace(/[^0-9.,]/g, ''); // Remove todos os caracteres que não são números, vírgulas ou pontos
+        } else {
+            if (input.length === 1 && input !== "," && /[0-9]/.test(input)) { // Verifica se há apenas um dígito e não é uma vírgula
+                event.target.value = input + ","; // Adiciona uma vírgula após o primeiro dígito
+            }
+        }
+    });
+    
+    document.querySelector('.enterInputHeight').addEventListener('keydown', (event) => {
+        var keyCode = event.keyCode;
+        if (keyCode === 8) { // Verifica se a tecla pressionada é a tecla de apagar (backspace)
+            var input = event.target.value;
+            if (input.length === 2 && input.endsWith(",")) { // Se há uma vírgula após o primeiro dígito, permite a remoção da vírgula
+                event.target.value = input.slice(0, -1); // Remove a vírgula
+                event.preventDefault(); // Impede a ação padrão da tecla de apagar (backspace)
+            }
+        }
+    });
+
+    
 
      
 
