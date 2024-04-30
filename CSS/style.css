@@ -9,18 +9,24 @@ body{
 }
 
 header{
-    margin: 0px;
     font-family: "Poppins", sans-serif;
     text-align: center;
     height: 100px;
     justify-items: center;
     background-color: rgb(150, 150, 233);
     color: white;
-    font-size: 2rem;
-    padding-top: 50px;
-    margin-bottom: 48px;
+    margin-bottom: 10px;
     box-shadow: 5px 5px 10px rgb(94, 93, 93);
     text-shadow: 2px 2px 2px #313030;
+} /*configurações do header*/
+
+h2{
+    padding-top: 28px;
+    animation: upText;
+    animation-duration: 5s;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
 }
 
 main{ 
@@ -28,12 +34,21 @@ main{
     justify-content: center;
     height: 585px;
     max-width: 500px;
-   
     box-shadow: 5px 5px 10px rgba(104, 103, 103, 0.781);
     border-radius: 5px;
     margin: auto;
+    margin-top: 10px;
     background-image: url(../imagem/dia-mundial-da-saude_Beep-Saude.jpg);
 }
+
+@media screen and (max-width: 500px){
+    main {
+        margin-top: 7px;
+    }
+
+    
+}
+
 
 #tittle{
     font-family: Arial, Helvetica, sans-serif;
@@ -103,27 +118,31 @@ div#start a {
         margin-top: 20px;
     }
 
-
-
-    footer {
-        display: block;
-        width: 100%;
-        background-color: #b4b1b1;
-        padding: 20px;
-        text-align: center;
-        color: #2e2b2b;
-        position: fixed;
-        bottom: 0;
-        padding-top: 20px;
-        
+    main {
+        font-size: .9rem;
+        height: 585px;
+        max-width: 500px;
+        box-shadow: 5px 5px 10px rgba(104, 103, 103, 0.781);
+        border-radius: 5px;
+        margin: 10px;
     }
+
+
+#intro {
+    padding: 30px 5px 50px 5px;
    
 }
 
-main{
-    margin-top: -20px;
+#intro li {
+    font-size: 1rem;
 }
 
+
+   footer {
+        
+          display: none;
+   
+}
 
 
 footer {
@@ -144,4 +163,4 @@ footer {
     color: #313030;
 }
 
-
+}

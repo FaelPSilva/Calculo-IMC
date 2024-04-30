@@ -11,6 +11,7 @@ body{
 
 
 h2{
+    padding-top: 28px;
     animation: upText;
     animation-duration: 5s;
     font-size: 1.5rem;
@@ -19,7 +20,6 @@ h2{
 }
 
 header{
-    
     font-family: "Poppins", sans-serif;
     text-align: center;
     height: 100px;
@@ -27,8 +27,7 @@ header{
     background-color: rgb(150, 150, 233);
     color: white;
     font-size: 2rem;
-    padding-top: 50px;
-    margin-bottom: 48px;
+    margin-bottom: 10px;
     box-shadow: 5px 5px 10px rgb(94, 93, 93);
     text-shadow: 2px 2px 2px #313030;
 } /*configurações do header*/
@@ -50,7 +49,8 @@ main {
     max-width: 600px;
     box-shadow: 5px 5px 10px rgba(104, 103, 103, 0.781);
     border-radius: 5px;
-    margin: auto;
+   
+    margin-top: 0px;
    
 } /*conteúdo principal*/
 
@@ -215,14 +215,14 @@ footer {
         padding-top: 0px;
     }
 .container{
-    margin-top: -20px;
+    margin-top: 7px;
 }
     #start {
         margin-top: 20px;
     }
     footer {
         
-            position: fixed; /* Alterado de 'absolute' para 'fixed' */
+            position: fixed; 
             left: 0;
             bottom: -16px;
             width: 100%;
@@ -231,9 +231,7 @@ footer {
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #2e2b2b;
-            
-        
+            color: #2e2b2b;    
     }
 
     body {
@@ -241,5 +239,7 @@ footer {
             overflow-y: scroll; /* Adiciona scroll vertical ao body quando a largura da tela é menor ou igual a 600px */
           }
         
-    
+    #weight {
+        padding: 0px 1px;
+    }
 }
