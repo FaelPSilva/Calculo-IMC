@@ -41,7 +41,7 @@ img {
     height: 220px;
 } /*imagem de fundo*/
 
-main {
+main {margin: auto;
     background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
